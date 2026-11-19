@@ -3,9 +3,9 @@ import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "🌿 PlantGuard AI – Potato Disease Detector",
+  title: "PlantGuard AI | Potato Leaf Health Screening",
   description:
-    "AI-powered CNN that detects Early Blight & Late Blight in potato leaves with eco-friendly treatment recommendations.",
+    "AI-powered potato leaf screening for Early Blight, Late Blight and healthy foliage, with integrated disease-management guidance.",
 };
 
 export default function RootLayout({

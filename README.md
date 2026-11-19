@@ -107,3 +107,28 @@ For deep biochemical analysis and evaluation metrics, see [`college_docs/Biotech
 
 ## 📜 License
 This project is licensed under the MIT License.
+
+---
+
+## ✨ PlantGuard AI Premium Upgrade (No Login)
+
+The upgraded frontend includes a premium green biotechnology interface, potato disease guide with symptoms and integrated-management recommendations, image prediction UI, theme toggle, local scan-history panel, and image validation. Login/signup/logout and Supabase authentication are intentionally not included. The original CNN model and prediction API contract are retained.
+
+### Local frontend setup
+
+1. In `frontend_website`, copy `.env.example` to `.env.local`.
+2. Set `NEXT_PUBLIC_API_URL` to the active FastAPI `/predict` endpoint.
+3. Run `npm install` and `npm run dev` from `frontend_website`.
+4. Open `http://localhost:3000`.
+
+### Production deployment
+
+Import this repository into Vercel and set the Root Directory to `frontend_website`. Configure only `NEXT_PUBLIC_API_URL` from `.env.example`, then deploy. Keep the FastAPI `/predict` service deployed separately and update the URL if its endpoint changes.
+
+See [`UPGRADE-GUIDE-HI.md`](UPGRADE-GUIDE-HI.md) for the step-by-step Hindi setup.
+
+### Notes
+
+- Scan history is stored locally in this browser/device and is not cloud-synced.
+- The classifier only covers the three potato classes in its training labels. Predictions are screening results, not confirmed diagnoses.
+- Disease management text is general IPM guidance. Local agricultural extension advice and product labels take precedence for crop-protection decisions.

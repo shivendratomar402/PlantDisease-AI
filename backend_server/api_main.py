@@ -55,43 +55,42 @@ MAX_FILE_MB     = 10
 # ─────────────────────────────────────────────────────────────
 DISEASE_INFO: Dict[str, dict] = {
     "Potato___Early_blight": {
-        "display_name" : "Early Blight",
-        "pathogen"     : "Alternaria solani",
-        "severity"     : "Moderate",
-        "treatment"    : (
-            "• Apply copper-based fungicides (Copper Oxychloride 3 g/L) at first symptom onset.\n"
-            "• Spray with bio-fungicide containing Bacillus subtilis to boost plant immunity.\n"
-            "• Remove and destroy infected lower leaves to reduce inoculum load.\n"
-            "• Practice crop rotation with non-solanaceous crops (maize/legumes) every 2 years.\n"
-            "• Maintain adequate spacing to improve air circulation and reduce humidity.\n"
-            "• Avoid overhead irrigation; use drip irrigation where possible.\n"
-            "• Avoid excess nitrogenous fertilizer – increases host susceptibility."
+        "display_name": "Early Blight",
+        "pathogen": "Alternaria solani",
+        "severity": "Moderate",
+        "treatment": (
+            "• Remove heavily affected leaves and manage infected crop residues according to local guidance.\n"
+            "• Use healthy, certified seed tubers and rotate crops where practical.\n"
+            "• Maintain adequate plant spacing and airflow; avoid prolonged leaf wetness.\n"
+            "• Prefer soil-level or drip irrigation over overhead watering.\n"
+            "• Maintain balanced crop nutrition and monitor older leaves regularly.\n"
+            "• If disease continues to spread, ask a local agricultural extension officer about products registered for potato early blight in your area; follow the label exactly."
         ),
     },
     "Potato___Late_blight": {
-        "display_name" : "Late Blight",
-        "pathogen"     : "Phytophthora infestans",
-        "severity"     : "High – Epidemic Risk",
-        "treatment"    : (
-            "• Immediately apply systemic fungicide (Metalaxyl + Mancozeb, 2.5 g/L) every 7 days.\n"
-            "• Destroy infected plant material — do NOT compost (oomycete survives).\n"
-            "• Apply biological control: Pseudomonas fluorescens rhizosphere inoculants (2 mL/L).\n"
-            "• Plant late-blight-resistant cultivars (e.g., Sarpo Mira, Kennebec) in next season.\n"
-            "• Monitor weather: spore release peaks at >90% humidity & 10–24°C — spray preventively.\n"
-            "• Avoid wounding tubers during harvest to prevent secondary infection.\n"
-            "• Report outbreak to local agricultural extension for epidemic mapping."
+        "display_name": "Late Blight",
+        "pathogen": "Phytophthora infestans",
+        "severity": "High – Epidemic Risk",
+        "treatment": (
+            "• Treat suspected late blight as urgent and contact a local agricultural extension officer promptly.\n"
+            "• Remove and dispose of infected plant material according to local phytosanitary guidance; do not move suspect material between fields.\n"
+            "• Reduce leaf wetness: avoid overhead irrigation and improve airflow where practical.\n"
+            "• Use certified disease-free seed tubers and locally recommended resistant varieties where available.\n"
+            "• Only use products registered for potato late blight in your region; follow label directions, protective equipment and pre-harvest intervals.\n"
+            "• Monitor nearby plants frequently because outbreaks can spread rapidly in cool, wet conditions."
         ),
     },
     "Potato___healthy": {
-        "display_name" : "Healthy",
-        "pathogen"     : "None detected",
-        "severity"     : "None",
-        "treatment"    : (
-            "• No disease intervention required at this time.\n"
-            "• Continue balanced NPK fertilization and routine scouting every 5–7 days.\n"
-            "• Maintain good field hygiene: remove crop residues after harvest.\n"
-            "• Apply preventive copper-based spray at tuber initiation stage as a prophylactic.\n"
-            "• Ensure certified disease-free seed tubers for the next planting season."
+        "display_name": "Healthy",
+        "pathogen": "None detected",
+        "severity": "None",
+        "treatment": (
+            "• No disease intervention is indicated by this image screening result.\n"
+            "• Continue routine field scouting, especially after wet weather.\n"
+            "• Use healthy seed tubers and maintain good field hygiene.\n"
+            "• Water consistently and avoid keeping foliage wet for long periods.\n"
+            "• Maintain balanced nutrition based on crop needs and soil testing where available.\n"
+            "• This result does not rule out early infection or diseases outside the model's three classes."
         ),
     },
 }

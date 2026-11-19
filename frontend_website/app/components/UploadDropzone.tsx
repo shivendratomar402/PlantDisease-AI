@@ -32,11 +32,17 @@ export function UploadDropzone({ onResult, onLoading }: Props) {
 
   const processFile = useCallback(
     async (file: File) => {
-      if (!file.type.startsWith("image/")) {
-        setError("Please upload a valid image file (JPEG or PNG).");
+      const allowed = ["image/jpeg", "image/png", "image/webp"];
+      if (!allowed.includes(file.type)) {
+        setError("Please upload a JPG, PNG or WebP image.");
+        return;
+      }
+      if (file.size > 10 * 1024 * 1024) {
+        setError("This image is larger than 10 MB. Choose a smaller image.");
         return;
       }
       setError(null);
+      if (preview) URL.revokeObjectURL(preview);
       const objectUrl = URL.createObjectURL(file);
       setPreview(objectUrl);
 
@@ -65,7 +71,7 @@ export function UploadDropzone({ onResult, onLoading }: Props) {
         onLoading(false);
       }
     },
-    [onResult, onLoading]
+    [onResult, onLoading, preview]
   );
 
   const handleDrop = (e: React.DragEvent) => {
@@ -76,6 +82,7 @@ export function UploadDropzone({ onResult, onLoading }: Props) {
   };
 
   const clear = () => {
+    if (preview) URL.revokeObjectURL(preview);
     setPreview(null);
     setError(null);
     if (inputRef.current) inputRef.current.value = "";
